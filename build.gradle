@@ -1,0 +1,21 @@
+group 'org.djrappdev.quizbowlserver'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'http://maven.tmatesoft.com/content/repositories/releases'
+    }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile 'com.github.briandilley.jsonrpc4j:jsonrpc4j:1.5.2'
+    //compile 'org.springframework:spring-context:5.0.2.RELEASE'
+    compile 'org.xerial:sqlite-jdbc:3.21.0.1'
+    compile ('org.springframework.boot:spring-boot-starter-web:1.5.9.RELEASE')
+}
